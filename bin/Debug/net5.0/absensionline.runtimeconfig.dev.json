@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\noval\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\noval\\.nuget\\packages"
+    ]
+  }
+}

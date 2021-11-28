@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" contex="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Absensionline</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <style>
+        .mynav_navbar {
+            overflow: hidden;
+        }
+
+        .mynav_nabar a {
+            float: Left;
+            font-size: 16px;
+            color: blue;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .mynav_dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .mynav_dropdown .mynav_dropbtn {
+            font-size: 16px;
+            border: none;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .mynav_navbar a:hover,
+        .mynav_dropdown:hover .mynav_dropbtn {
+            background-color: blue;
+        }
+
+        .mynav_dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: blueviolet;
+            min-height: 160px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 2);
+            z-index: 1;
+        }
+
+        .mynav_dropdown-content a {
+            float: none;
+            color: seagreen;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .mynav_dropdown-content a:hover {
+            background-color: silver;
+        }
+
+        .mynav_dropdown:hover .mynav_dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Absensionline</a>
+                <button class="navbar-toggler" type="button" data-toggler="collapse" data-target=".navbar-collapse"
+                    aria-expanded="false" aria-label="toggle navigator"></button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reserve">
+                    <div class="navbar-nav flex-grow-1">
+                        <div class="maynav_navbar">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                        </div>
+                        <div class="maynav_dropdown">
+                            <button class="maynav_dropbtn">
+                                Master
+                                <i class=" fa fa-caret-down"></i>
+                            </button>
+                            <div class="mynav_dropdwon-content">
+                                <a href="/Mahasiswa" class="nav-link text-dark">Mahasiswa</a>
+                                <a href="/Dosen" class="nav-link text-dark">Dosen</a>
+                            </div>
+                        </div>
+                        <div class="my_navbar">
+                            <a class="nav link text-dark" asp-area" asp-page="/Rekap">Rekap</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - Absensionline - <a asp-area"" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~lib/jquery/dist/jquery.min.js"></script>
+    <script src="~lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

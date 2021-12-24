@@ -1,0 +1,33 @@
+body {
+  min-height: 2000px;
+}
+
+.jumbrotron,
+.lead {
+  padding-top: 6rem;
+  background-color: #1f1f1f;
+  color: #ffff;
+}
+
+#about,
+p {
+  color: #1f1f1f;
+}
+
+#nav {
+  background-color: #00bfff;
+}
+
+#project,
+.h2 {
+  background-color: #1f1f1f;
+  color: #ffff;
+}
+
+.footer {
+  background-color: #00bfff;
+}
+
+section {
+  padding-top: 5rem;
+}

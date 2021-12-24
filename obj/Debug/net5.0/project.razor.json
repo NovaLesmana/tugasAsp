@@ -15654,8 +15654,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\ASP\\latihan\\absensionline\\Pages\\Shared\\Layout.cshtml",
-      "TargetPath": "Pages\\Shared\\Layout.cshtml",
+      "FilePath": "c:\\ASP\\latihan\\absensionline\\Pages\\Rekap.cshtml",
+      "TargetPath": "Pages\\Rekap.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15664,13 +15664,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\ASP\\latihan\\absensionline\\Pages\\Mahasiswaadd.cshtml",
+      "TargetPath": "Pages\\Mahasiswaadd.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\ASP\\latihan\\absensionline\\Pages\\_ViewImports.cshtml",
       "TargetPath": "Pages\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\ASP\\latihan\\absensionline\\Pages\\Shared\\Mahasiswa.cshtml",
-      "TargetPath": "Pages\\Shared\\Mahasiswa.cshtml",
+      "FilePath": "c:\\ASP\\latihan\\absensionline\\Pages\\Shared\\_Layout.cshtml",
+      "TargetPath": "Pages\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\ASP\\latihan\\absensionline\\Pages\\Mahasiswa.cshtml",
+      "TargetPath": "Pages\\Mahasiswa.cshtml",
       "FileKind": "mvc"
     }
   ],

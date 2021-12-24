@@ -2,10 +2,12 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+    Layout = null;
 }
 
 <div class="text-center">
+    <a href="/Login">LogOut</a>
     <h1 class="display-4">Welcome @User.Identity.Name</h1>
-    <p><a href a="/Logout">Logout</a></p>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias doloribus, fugit, quasi doloremque iure ullam,
+        vel odit quibusdam beatae ducimus illum libero eveniet iste autem neque hic asperiores ut accusamus.</p>
 </div>

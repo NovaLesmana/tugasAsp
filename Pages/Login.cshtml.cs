@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using absensionline.Models;
@@ -22,30 +24,30 @@ namespace absensionline.Pages
         }
         [BindProperty]
         public string UserEmail { get; set; }
-        [BindProperty, DataType(DataType.Password)]
+        [BindProperty]
         public string Password { get; set; }
         public string Message { get; set; }
 
-        public async Task<IActionResult> onPost()
+        public async Task<IActionResult> OnPostAsync()
+
         {
             var user = configuration.GetSection("User").Get<User>();
 
             if (UserEmail == user.Email)
             {
-                var passwordHasher = new PasswordHasher<string>();
-                if (passwordHasher.VerifyHashedPassword(null, user.Password, Password)
-                == PasswordVerificationResult.Success)
+                if (Password == user.Password)
                 {
+
                     var claims = new List<Claim>
                     {
                         new Claim(ClaimTypes.Name, UserEmail),
-                        new Claim(ClaimTypes.Role, "admin"),
+                        new Claim(ClaimTypes.Role, "admin")
                     };
-                    var identity = new ClaimsIdentity(claims,
+                    var claimsIdentity = new ClaimsIdentity(claims,
                     CookieAuthenticationDefaults.AuthenticationScheme);
                     await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
-                           new ClaimsPrincipal(identity));
-                    return RedirectToPage("/Index");
+                           new ClaimsPrincipal(claimsIdentity));
+                    return RedirectToPage("latihanbootstrap");
                 }
                 Message = "Password salah";
                 return Page();

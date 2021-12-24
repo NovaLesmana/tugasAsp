@@ -1,0 +1,41 @@
+@page
+@model MahasiswaaddModel
+@{
+    ViewData["Title"] = "Add Mahasiswa";
+}
+<h2>Tambah Mahasiswa</h2>
+<div class="row">
+    <div class="col-md-4">
+        <form action="" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="from group">
+                <label asp-for="Mhs.Nim" class="control-label"></label>
+                <input asp-for="Mhs.Nim" class="form control">
+                <span asp-validation-for="Mhs.Nim" class="text-danger"></span>
+            </div>
+            <div class="from group">
+                <label asp-for="Mhs.Nama" class="control-label"></label>
+                <input asp-for="Mhs.Nama" class="form control">
+                <span asp-validation-for="Mhs.Nim" class="text-danger"></span>
+            </div>
+            <div class="from group">
+                <label asp-for="Mhs.Kelas" class="control-label"></label>
+                <input asp-for="Mhs.Kelas" class="form control">
+                <span asp-validation-for="Mhs.Nim" class="text-danger"></span>
+            </div>
+            <div class="from group">
+                <label asp-for="Mhs.Jurusan" class="control-label"></label>
+                <input asp-for="Mhs.Jurusan" class="form control">
+                <span asp-validation-for="Mhs.Jurusan" class="text-danger"></span>
+            </div>
+            <input asp-for="Mhs.Id" type="hidden">
+            <br>
+            <div class="form-group">
+                <input type="submit" value="simpan" class="btn btn-primary">
+            </div>
+        </form>
+    </div>
+</div>
+@section scripts{
+@{await Html.RenderPartialAsync("_ValidationscriptsPartial");}
+}

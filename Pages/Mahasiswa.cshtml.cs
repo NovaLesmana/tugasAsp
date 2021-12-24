@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using absensionline.Models;
 using absensionline.pages.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -15,9 +17,24 @@ namespace absensionline.Pages
         }
         [BindProperty]
         public Mahasiswa Mhs { get; set; }
-        public void OnGet()
-        {
 
+        [BindProperty]
+        public List<DataMahasiswa> DataMahasiswa { get; set; }
+
+        public IActionResult OnGet()
+        {
+            koneksiDB conn = new koneksiDB();
+            if (conn.checkConnection())
+            {
+                TempData["cekkoneksi"] = "sukses koneksi DB";
+            }
+            else
+            {
+                TempData["cekkoneksi"] = "gagal koneksi DB";
+            }
+            ProsesMahasiswa proses = new ProsesMahasiswa();
+            DataMahasiswa = proses.getMahasiswa();
+            return Page();
         }
         public IActionResult OnPost()
         {

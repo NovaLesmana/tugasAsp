@@ -16,8 +16,8 @@
         .mynav_nabar a {
             float: Left;
             font-size: 16px;
-            color: blue;
-            text-align: center;
+            color: #ffc500;
+            text-align: justify;
             padding: 14px 16px;
             text-decoration: none;
         }
@@ -30,6 +30,7 @@
         .mynav_dropdown .mynav_dropbtn {
             font-size: 16px;
             border: none;
+            outline: none;
             padding: 14px 16px;
             background-color: inherit;
             font-family: inherit;
@@ -52,7 +53,7 @@
 
         .mynav_dropdown-content a {
             float: none;
-            color: seagreen;
+            color: black;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
@@ -60,7 +61,7 @@
         }
 
         .mynav_dropdown-content a:hover {
-            background-color: silver;
+            background-color: #ddd;
         }
 
         .mynav_dropdown:hover .mynav_dropdown-content {
@@ -71,18 +72,23 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav id="nav" class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">Absensionline</a>
-                <button class="navbar-toggler" type="button" data-toggler="collapse" data-target=".navbar-collapse"
-                    aria-expanded="false" aria-label="toggle navigator"></button>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggle-icon"></span>
+                </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reserve">
                     <div class="navbar-nav flex-grow-1">
                         <div class="maynav_navbar">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </div>
-                        <div class="maynav_dropdown">
-                            <button class="maynav_dropbtn">
+                        <div class="maynav_navbar">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/latihanbootstrap">My Portopolio</a>
+                        </div>
+                        <div class="mynav_dropbtn">
+                            <button class="mynav_dropbtn">
                                 Master
                                 <i class=" fa fa-caret-down"></i>
                             </button>
